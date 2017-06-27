@@ -2,6 +2,8 @@
 " Plugins
 "=============================================================================
 call plug#begin()
+" Color
+Plug 'sonph/onehalf'
 
 " General
 "==================================================================="
@@ -19,6 +21,11 @@ Plug 'shougo/unite.vim'
 Plug 'chiel92/vim-autoformat'
 Plug 'tpope/vim-endwise'
 Plug 'majutsushi/tagbar'
+
+" Reference
+"==================================================================="
+Plug 'thinca/vim-ref'
+Plug 'exvim/ex-cref'
 
 " Window
 "==================================================================="
