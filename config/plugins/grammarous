@@ -1,0 +1,6 @@
+"=============================================================================
+" Grammerous config
+"=============================================================================
+let g:grammarous#languagetool_cmd = 'languagetool'
+g:grammarous#use_vim_spelllang
+

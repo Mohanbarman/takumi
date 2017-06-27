@@ -2,8 +2,10 @@
 " Plugins
 "=============================================================================
 call plug#begin()
+
 " Color
 Plug 'sonph/onehalf'
+"==================================================================="
 
 " General
 "==================================================================="
@@ -77,6 +79,16 @@ Plug 'tpope/vim-fugitive'
 "==================================================================="
 Plug 'plasticboy/vim-markdown'
 Plug 'mattn/emmet-vim'
+
+" Go
+"==================================================================="
+Plug 'nsf/gocode'
+
+" Language bad behavious
+"==================================================================="
+Plug 'rhysd/vim-grammarous'
+Plug 'vim-scripts/LanguageTool'
+Plug 'reedes/vim-wordy'
 
 call plug#end()
 
