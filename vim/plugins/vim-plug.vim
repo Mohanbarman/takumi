@@ -26,6 +26,7 @@ Plug 'tpope/vim-endwise'
 Plug 'majutsushi/tagbar'
 Plug 'marcweber/vim-addon-mw-utils'
 Plug 'shougo/vimshell.vim'
+Plug 'tmux-plugins/vim-tmux'
 
 "==================================================================="
 " Reference

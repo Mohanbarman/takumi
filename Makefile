@@ -1,3 +1,5 @@
+install:
+	./install.sh
+build:
+	./build.sh
 
-all:
-	sh build.sh
