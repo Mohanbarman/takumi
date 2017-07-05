@@ -14,7 +14,37 @@ ____o__ __o____            o                                       o
 # Dotfiles
 
 ### Getting started
+Only thing you have to do:
+```
+curl -Sf https://raw.githubusercontent.com/deltaxflux/takumi/master/install/install.sh | bash
+```
 
+## Features
+* Tmux config
+* zsh config
+* vim config
+* neovim config
+
+### Missing
+* Install requirements
+
+### Dependencies
+* clang 
+* vim
+* neovim
+* python
+* python3
+* pip
+* pip3
+* python modules: neovim
+* tmux
+* zsh 
+* git 
+* make
+* gcc 
+
+-------
+## Wiki
 ## 1. VIM
 Vim is a clone of Bill Joy's vi text editor program for Unix. It is designed to fast and more comfortable as vi.Part of Vim's power is that it can be extensively customized. The Vim config include 43 unique plugins and 2 colorschemes.
 
