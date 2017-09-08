@@ -1,3 +1,3 @@
 
 all:
-	sh build.sh
+	bash build.sh

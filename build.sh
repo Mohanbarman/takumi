@@ -8,7 +8,8 @@ cd zsh
 if [ ! -d ~/.zprezto/ ];then
    ./install/install.sh
 fi
-./build.sh &
+
+./build.sh | tee -a log &
 
 # ==========================================================
 # Tmux
@@ -20,15 +21,13 @@ cd ../tmux
 # Vim
 # ==========================================================
 cd ../nvim
-./install/install.sh
+./install/install.sh | tee -a log &
 
 # ==========================================================
 # Vim
 # ==========================================================
 cd ../vim
-./install/install.sh
+./install/install.sh | tee -a log &
 
-# ==========================================================
-# Clean
-# ==========================================================
-killall zsh vim nvim
+clear
+echo "\033[31mConfig sucessfull installed"

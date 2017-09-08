@@ -5,7 +5,6 @@
 # License: GNU v.3
 #"=============================================================================
 
-
 # Check if color folder is present
 if [ ! -d "~/.vim/colors/" ];then
 	mkdir -p ~/.vim/colors
