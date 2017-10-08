@@ -8,4 +8,9 @@ if (empty($TMUX))
 endif
 
 syntax on
-silent colorscheme onedark
+try
+    silent colorscheme onedark
+catch
+endtry
+
+hi Normal guibg=NONE ctermbg=NONE

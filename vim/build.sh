@@ -6,6 +6,21 @@
 #"=============================================================================
 
 #=======================================
+# Copy files
+#=======================================
+if [ ! -d  ~/.vim/custom/ ];then
+    mkdir ~/.vim/custom/
+fi
+
+if [ ! -f ~/.vim/custom/big.txt ];then
+    cp -r misc/big.txt ~/.vim/custom/
+fi
+
+if [ ! -f ~/.vim/custom/small.txt ];then
+    cp -r misc/small.txt ~/.vim/custom/
+fi
+
+#=======================================
 # Erase config
 #=======================================
 rm -rf ~/.vimrc

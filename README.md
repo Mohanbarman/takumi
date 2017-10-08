@@ -13,6 +13,8 @@ ____o__ __o____            o                                       o
 
 # Dotfiles
 
+Takumi are lightway dotfiles focused on c/cpp development. The config include alias and snippets to make development even easier. Arrow keys are disabled use the vim movement hjkl instead.
+
 ### Getting started
 Only thing you have to do:
 ```
@@ -25,11 +27,14 @@ curl -Sf https://raw.githubusercontent.com/deltaxflux/takumi/master/install/inst
 * vim config
 * neovim config
 
-### Missing
-* Install requirements
-
 ### Dependencies
-* clang 
+It is important to install all dependencies to provide the best vim config. Use your favorite package manager to install dependencies.
+```
+[package manager] install [dependencies]
+```
+<br>
+* clang
+* curl
 * vim
 * neovim
 * python
@@ -38,9 +43,9 @@ curl -Sf https://raw.githubusercontent.com/deltaxflux/takumi/master/install/inst
 * pip3
 * python modules: neovim
 * tmux
-* zsh 
-* git 
+* zsh
+* git
 * make
-* gcc 
+* c compiler (e.g. gcc)
 
 -------

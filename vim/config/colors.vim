@@ -9,3 +9,4 @@ else
     colorscheme onehalfdark
 endif
 
+hi Normal guibg=NONE ctermbg=NONE
