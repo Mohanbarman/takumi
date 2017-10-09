@@ -9,12 +9,6 @@ set number
 set history=500
 
 "=======================================
-" Enable filetype
-"=======================================
-filetype plugin on
-filetype indent on
-
-"=======================================
 " Autoread if the file is changed
 "=======================================
 set autoread
@@ -80,6 +74,27 @@ set smartcase
 set hlsearch
 
 "=======================================
+" Ignore pattern when searching
+"=======================================
+set ignorecase
+
+"=======================================
+" Highlight pattern
+"=======================================
+set incsearch
+
+"=======================================
+" Indent shiftwidth
+"=======================================
+set shiftround
+
+"=======================================
+" Show invisible characters
+"=======================================
+set list
+set listchars=tab:\|\ ,trail:•
+
+"=======================================
 " Modern search
 "=======================================
 set incsearch
@@ -95,6 +110,16 @@ set lazyredraw
 set magic
 
 "=======================================
+" Detect modeline hints
+"=======================================
+set modeline
+
+"=======================================
+" Expand tab number
+"=======================================
+set tabpagemax=50
+
+"=======================================
 " Show matching brackets
 "=======================================
 set showmatch
@@ -108,9 +133,30 @@ set t_vb=
 set tm=500
 
 "=======================================
+" Set columns
+"=======================================
+set colorcolumn=80
+highlight OverLength ctermbg=red ctermfg=white guibg=#592929
+match OverLength /\%81v.\+/
+autocmd WinEnter * match OverLength /\%81v.\+/
+
+"=======================================
 " Margin
 "=======================================
 set foldcolumn=1
+
+"=======================================
+" Set clipboard
+"=======================================
+set clipboard+=unnamedplus
+
+"=======================================
+" Set grep tool
+"=======================================
+if executable('ack')
+	set grepprg=ack\ --nogroup\ --column\ --smart-case\ --nocolor\ --follow\ $*
+	set grepformat=%f:%l:%c:%m
+endif
 
 "=======================================
 " MAC NVIM
@@ -128,6 +174,23 @@ if has("gui_running")
     set t_Co=256
     set guitablabel=%M\ %t
 endif
+
+"=============================================================================
+" UI Tweaks
+"=============================================================================
+set number
+set showcmd
+set lazyredraw
+set laststatus=2
+set scrolloff=10
+set noshowmode
+set cursorline
+set linebreak
+let &showbreak='↪ '
+autocmd WinLeave * setlocal nocursorline
+autocmd WinEnter * setlocal cursorline
+set splitbelow
+set splitright
 
 "=============================================================================
 " Backups? Who cares ?
@@ -177,7 +240,6 @@ set tw=500
 "=======================================
 set autoindent
 set smartindent
-set bg=dark
 set nowrap
 set paste
 
@@ -252,14 +314,10 @@ set gfn=Monospace\ 11
 "=======================================
 " Python
 "=======================================
-let python_highlight_all = 1
 au FileType python syn keyword pythonDecorator True None False self
-
 au BufNewFile,BufRead *.jinja set syntax=htmljinja
 au BufNewFile,BufRead *.mako set ft=mako
-
 au FileType python map <buffer> F :set foldmethod=indent<cr>
-
 au FileType python inoremap <buffer> $r return
 au FileType python inoremap <buffer> $i import
 au FileType python inoremap <buffer> $p print
@@ -271,6 +329,15 @@ au FileType python map <buffer> <leader>D ?def
 au FileType python set cindent
 au FileType python set cinkeys-=0#
 au FileType python set indentkeys-=0#
+let python_highlight_builtins = 1
+let python_highlight_type_annotations = 1
+let python_highlight_exceptions = 1
+let python_highlight_string_formatting = 1
+let python_highlight_string_format = 1
+let python_highlight_string_templates = 0
+let python_highlight_indent_errors = 1
+let python_highlight_space_errors = 0
+let python_highlight_doctests = 1
 
 "=======================================
 " Shell
@@ -300,10 +367,28 @@ augroup project
 augroup END
 
 "=======================================
-" Secure boot
+" Additional highlight
 "=======================================
-set exrc
-set secure
+au! BufRead,BufNewFile *.wsgi setfiletype python
+au! BufRead,BufNewFile *.sass setfiletype sass
+au! BufRead,BufNewFile *.scss setfiletype scss
+au! BufRead,BufNewFile *.haml setfiletype haml
+au! BufRead,BufNewFile *.less setfiletype less
+
+"=======================================
+" Tab settings
+"=======================================
+au FileType cpp    setl ts=4 sw=4 sts=4
+au FileType ruby   setl ts=4 sw=4 sts=4
+au FileType yaml   setl ts=4 sw=4 sts=4
+au FileType html   setl ts=4 sw=4 sts=4
+au FileType jinja  setl ts=4 sw=4 sts=4
+au FileType lua    setl ts=4 sw=4 sts=4
+au FileType haml   setl ts=4 sw=4 sts=4
+au FileType sass   setl ts=4 sw=4 sts=4
+au FileType scss   setl ts=4 sw=4 sts=4
+au FileType make   setl ts=4 sw=4 sts=4 noet
+au FileType gitcommit setl spell
 
 "=======================================
 " Spell checking
@@ -320,57 +405,32 @@ if has("autocmd")
     au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 endif
 
-"=======================================
-" Help function
-"=======================================
-function! HasPaste()
-    if &paste
-        return 'PASTE MODE  '
-    endif
-    return ""
+"=============================================================================
+" Lastly gui changes
+"=============================================================================
+if has('gui_running')
+	set lines=999 columns=9999
 
-endfunction
-"=======================================
-" Custom function
-"=======================================
-command! Bclose call <SID>BufcloseCloseIt()
-function! <SID>BufcloseCloseIt()
-    let l:currentBufNum = bufnr("%")
-    let l:alternateBufNum = bufnr("#")
+	set guioptions+=t
+	set guioptions-=T
 
-    if buflisted(l:alternateBufNum)
-        buffer #
-    else
-        bnext
-    endif
+	if has('gui_macvim')
+		set gfn=Sauce\ Code\ Powerline\ Light:h12
+		set transparency=2
+	endif
 
-    if bufnr("%") == l:currentBufNum
-        new
-    endif
+	if has('gui_gtk')
+		set gfn=Sauce\ Code\ Powerline\ Light:h12
+	endif
+else
+	if $COLORTERM == 'gnome-terminal'
+		set t_Co=256
+	endif
 
-    if buflisted(l:currentBufNum)
-        execute("bdelete! ".l:currentBufNum)
-    endif
-endfunction
+	if $TERM_PROGRAM == 'iTerm.app'
+		" different cursors for insert vs normal mode
+		let &t_SI = "\<Esc>]50;CursorShape=1\x7"
+		let &t_EI = "\<Esc>]50;CursorShape=0\x7"
+	endif
+endif
 
-function! CmdLine(str)
-    exe "menu Foo.Bar :" . a:str
-    emenu Foo.Bar
-    unmenu Foo
-endfunction
-
-function! VisualSelection(direction, extra_filter) range
-    let l:saved_reg = @"
-    execute "normal! vgvy"
-
-    let l:pattern = escape(@", "\\/.*'$^~[]")
-    let l:pattern = substitute(l:pattern, "\n$", "", "")
-
-    if a:direction == 'gv'
-        call CmdLine("Ack '" . l:pattern . "' " )
-    elseif a:direction == 'replace'
-        call CmdLine("%s" . '/'. l:pattern . '/')
-    endif
-    let @/ = l:pattern
-    let @" = l:saved_reg
-endfunction

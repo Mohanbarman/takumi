@@ -34,7 +34,7 @@ cat vimrc >>  ~/.vimrc
 # Load plugins list
 #=======================================
 cat plugins/vim-plug.vim >> ~/.vimrc
-#vim -c PlugInstall -c qa!
+vim -c PlugInstall -c qa!
 
 #=======================================
 # Load latest config

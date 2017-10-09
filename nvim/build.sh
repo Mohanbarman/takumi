@@ -34,3 +34,4 @@ cat config/*.vim >> ~/.config/nvim/init.vim
 cat config/plugins/*.vim >> ~/.config/nvim/init.vim
 
 nvim -c PlugInstall -c UpdateRemotePlugins -c qa!
+

@@ -72,6 +72,15 @@ Plug 'suan/vim-instant-markdown'
 " Tmux in vim
 "=======================================
 Plug 'tmux-plugins/vim-tmux'
+
+"=======================================
+" Unite
+"=======================================
+Plug 'Shougo/vimproc.vim', { 'do': 'make' }
+Plug 'Shougo/neomru.vim'
+Plug 'Shougo/unite.vim'
+Plug 'Shougo/neoyank.vim'
+
 "=============================================================================
 " Snippets
 "=============================================================================
@@ -146,7 +155,6 @@ Plug 'marcweber/vim-addon-mw-utils'
 Plug 'tomtom/tlib_vim'
 Plug 'chiel92/vim-autoformat'
 Plug 'mhinz/vim-startify'
-Plug 'tweekmonster/startuptime.vim'
 
 "=============================================================================
 " END

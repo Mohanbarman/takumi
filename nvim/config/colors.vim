@@ -13,4 +13,3 @@ try
 catch
 endtry
 
-hi Normal guibg=NONE ctermbg=NONE

@@ -1,0 +1,17 @@
+Submodul-Pfad: 'modules/autosuggestions/external': '2cb6eb6e29852e64a146b0284275ecdc0661b082' ausgecheckt
+Submodul-Pfad: 'modules/completion/external': '97ae4a914ecbb63aa09c6a90688b2bee5e5f7e6d' ausgecheckt
+Submodul-Pfad: 'modules/history-substring-search/external': '933733e86724a018cb98cb8f514fc3d323461f74' ausgecheckt
+Submodul-Pfad: 'modules/prompt/external-themes/lean': '9e1b4901d17f2f0bb2fb90408a366a92ee798899' ausgecheckt
+Submodul-Pfad: 'modules/prompt/external-themes/liquidprompt': '9c80396021a8106bfaeade9a1ea51b85152e951d' ausgecheckt
+Submodul-Pfad: 'modules/prompt/external-themes/pure': '58db1075d52964db7d321b062c6fac559759eae4' ausgecheckt
+Submodul-Pfad: 'modules/syntax-highlighting/external': 'ad522a091429ba180c930f84b2a023b40de4dbcc' ausgecheckt
+Shell für deltax ändern.
+]0;deltax@postfaktisch:~/takumi]0;deltax@postfaktisch:~/takumi[?1h=[?1l>install
+nvim
+tmux
+vim
+zsh
+build.sh
+Makefile
+README.md
+]0;deltax@postfaktisch:~/takumi[?1h=[?1l>]0;deltax@postfaktisch:~/takumi[?1h=[?1l>[3J[H[2J]0;deltax@postfaktisch:~/takumi[?1h=[?1l>]0;deltax@postfaktisch:~/takumi[?1h=[?1l>]0;deltax@postfaktisch:~/takumi[?1h=[?1l>]0;deltax@postfaktisch:~/takumi[?1h=[?1l>]0;deltax@postfaktisch:~/takumi[?1h=[?1l>]0;deltax@postfaktisch:~/takumi[?1h=/home/deltax/takumi

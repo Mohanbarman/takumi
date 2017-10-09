@@ -2,10 +2,10 @@
 cd ~/
 
 if [ ! -d ~/takumi/ ];then
-    git clone https://github.com/deltaxflux/takumi
+    git clone https://github.com/deltaxflux/takumi ~/takumi/
 fi
 
-cd takumi
+cd ~/takumi
 
 make
 
