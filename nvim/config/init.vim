@@ -146,11 +146,6 @@ autocmd WinEnter * match OverLength /\%81v.\+/
 set foldcolumn=1
 
 "=======================================
-" Set clipboard
-"=======================================
-set clipboard+=unnamedplus
-
-"=======================================
 " Set grep tool
 "=======================================
 if executable('ack')

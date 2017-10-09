@@ -123,7 +123,7 @@ Plug 'airblade/vim-gitgutter'
 "=============================================================================
 " Autcomplete libaries
 "=============================================================================
-Plug 'Valloric/YouCompleteMe', { 'do': './install.py --all' }
+Plug 'Valloric/YouCompleteMe', { 'do': './install.py --clang-complete' }
 Plug 'ajh17/vimcompletesme'
 
 "=======================================
