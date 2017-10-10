@@ -2,6 +2,20 @@
 " Plug config
 "=============================================================================
 
+let vim_plug_just_installed = 0
+let vim_plug_path = expand('~/.config/nvim/autoload/plug.vim')
+if !filereadable(vim_plug_path)
+        echo "Installing Vim-plug..."
+        echo ""
+        silent !mkdir -p ~/.config/nvim/autoload
+        silent !curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+        let vim_plug_just_installed = 1
+endif
+
+if vim_plug_just_installed
+        :execute 'source '.fnameescape(vim_plug_path)
+endif
+
 call plug#begin()
 
 "=============================================================================
@@ -12,6 +26,13 @@ call plug#begin()
 " Colorscheme
 "=======================================
 Plug 'joshdick/onedark.vim'
+
+"=======================================
+" Statusbar in nvim
+"=======================================
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'myusuf3/numbers.vim'
 
 "=======================================
 " Complete with tab
@@ -81,6 +102,11 @@ Plug 'Shougo/neomru.vim'
 Plug 'Shougo/unite.vim'
 Plug 'Shougo/neoyank.vim'
 
+"=======================================
+" Syntax check
+"=======================================
+Plug 'vim-syntastic/syntastic'
+
 "=============================================================================
 " Snippets
 "=============================================================================
@@ -91,18 +117,27 @@ Plug 'garbas/vim-snipmate'
 "=============================================================================
 " Autcomplete
 "=============================================================================
-Plug 'prabirshrestha/asyncomplete-necovim.vim'
+Plug 'wokalski/autocomplete-flow'
+Plug 'maralla/completor.vim'
+Plug 'Shougo/neosnippet'
+Plug 'Shougo/neosnippet-snippets'
+Plug 'maralla/completor.vim'
+Plug 'maralla/completor-neosnippet'
+Plug 'shougo/deoplete.nvim'
 
 "=======================================
 " C and C++ autocomplete
 "=======================================
-Plug 'rip-rip/clang_complete'
+Plug 'octol/vim-cpp-enhanced-highlight', { 'for': ['cpp', 'c', 'h'] }
+Plug 'derekwyatt/vim-protodef', { 'for': ['cpp', 'c', 'h'] }
+Plug 'derekwyatt/vim-fswitch', { 'for': ['cpp', 'c', 'h'] }
+"Plug 'maralla/completor.vim'
+Plug 'nlknguyen/c-syntax.vim',              {'for': 'c'}
 
 "=======================================
 " Main autocomplete framework
 "=======================================
-Plug 'roxma/nvim-completion-manager'
-Plug 'zchee/deoplete-jedi'
+Plug 'Shougo/context_filetype.vim'
 
 "=============================================================================
 " Latex support
@@ -110,21 +145,9 @@ Plug 'zchee/deoplete-jedi'
 Plug 'donRaphaco/neotex', { 'for': 'tex' }
 
 "=============================================================================
-" Php support
-"=============================================================================
-Plug 'roxma/LanguageServer-php-neovim',  {'do': 'composer install && composer run-script parse-stubs'}
-
-"=============================================================================
 " Github
 "=============================================================================
-Plug 'pocke/neco-gh-issues'
 Plug 'airblade/vim-gitgutter'
-
-"=============================================================================
-" Autcomplete libaries
-"=============================================================================
-Plug 'Valloric/YouCompleteMe', { 'do': './install.py --clang-complete' }
-Plug 'ajh17/vimcompletesme'
 
 "=======================================
 " Syntax autocomplete
@@ -141,6 +164,21 @@ Plug 'Shougo/neco-vim'
 "=======================================
 Plug 'Shougo/neoinclude.vim'
 
+"=======================================
+" Autoclose windows
+"=======================================
+Plug 'Townk/vim-autoclose'
+
+"=======================================
+" Search engine
+"=======================================
+Plug 'mileszs/ack.vim'
+
+"=======================================
+" Html plugin
+"=======================================
+Plug 'mattn/emmet-vim'
+
 "=============================================================================
 " Python support
 "=============================================================================
@@ -149,6 +187,7 @@ Plug 'neovim/python-client'
 Plug 'klen/python-mode'
 Plug 'hynek/vim-python-pep8-indent'
 Plug 'fs111/pydoc.vim'
+"Plug 'fisadev/vim-isort'
 
 "=============================================================================
 " MISC
@@ -157,7 +196,6 @@ Plug 'marcweber/vim-addon-mw-utils'
 Plug 'tomtom/tlib_vim'
 Plug 'chiel92/vim-autoformat'
 Plug 'mhinz/vim-startify'
-
 "=============================================================================
 " END
 "=============================================================================

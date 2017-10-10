@@ -3,9 +3,9 @@
 "=============================================================================
 
 function! InsertSmall ()
-    r~/.vim/custom/small.txt
+    r~/.config/nvim/custom/small.txt
 endfunction
 
 function! InsertBig()
-    r~/.vim/custom/big.txt
+    r~/.config/nvim/custom/big.txt
 endfunction
