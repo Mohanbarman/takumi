@@ -29,10 +29,6 @@ curl -Sf https://raw.githubusercontent.com/deltaxflux/takumi/master/install/inst
 
 ### Dependencies
 It is important to install all dependencies to provide the best vim config. Use your favorite package manager to install dependencies.
-```
-[package manager] install [dependencies]
-```
-<br>
 * clang
 * curl
 * vim
