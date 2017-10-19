@@ -16,11 +16,14 @@ ____o__ __o____            o                                       o
 Takumi are lightway dotfiles focused on c/cpp development. The config include alias and snippets to make development even easier. Arrow keys are disabled use the vim movement hjkl instead.
 
 ### Getting started
-Only thing you have to do:
+Only thing you have to do
 ```
 curl -Sf https://raw.githubusercontent.com/deltaxflux/takumi/master/install/install.sh | bash
 ```
-
+For python modules
+```
+sudo pip2 install neovim && sudo pip3 install neovim
+```
 ## Features
 * Tmux config
 * zsh config
@@ -33,6 +36,7 @@ It is important to install all dependencies to provide the best vim config. Use 
 [package manager] install [dependencies]
 ```
 <br>
+
 * clang
 * curl
 * vim
@@ -48,4 +52,13 @@ It is important to install all dependencies to provide the best vim config. Use 
 * make
 * c compiler (e.g. gcc)
 
--------
+### Install
+#### On debian
+```
+sudo apt-get install vim neovim curl clang python python-pip python3 python3-pip tmux zsh git wget make gcc
+```
+
+#### On arch
+```
+sudo pacman -S vim neovim curl clang python python-pip python3 python3-pip tmux zsh git wget make gcc
+```
