@@ -40,9 +40,11 @@ Plug 'myusuf3/numbers.vim'
 Plug 'ervandew/supertab'
 
 "=======================================
-" Build system
+" Latex is love
 "=======================================
-Plug 'neomake/neomake'
+Plug 'lervag/vimtex'
+Plug 'gerw/vim-latex-suite'
+Plug 'gmarik/snipmate.vim'
 
 "=======================================
 " Help needed?
@@ -106,6 +108,11 @@ Plug 'Shougo/neoyank.vim'
 " Syntax check
 "=======================================
 Plug 'vim-syntastic/syntastic'
+
+"=======================================
+" Singlecompile
+"=======================================
+Plug 'xuhdev/singlecompile'
 
 "=============================================================================
 " Snippets

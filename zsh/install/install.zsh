@@ -1,10 +1,11 @@
 #/bin/zsh
 
-rm -rf ~/.zsh*
-rm -rf ~/.zim*
-rm -rf ~/.oh*
-rm -rf ~/.fish*
+rm -rf "~/.zsh*"
+rm -rf "~/.zim*"
+rm -rf "~/.oh*"
+rm -rf "~/.fish*"
 
+# clone new zsh shell
 if [ ! -d ~/.zim ];then
     git clone --recursive https://github.com/Eriner/zim.git ${ZDOTDIR:-${HOME}}/.zim
 fi
@@ -18,3 +19,5 @@ done
 
 chsh -s =zsh
 source ${ZDOTDIR:-${HOME}}/.zlogin
+
+echo "\033[32m[I]:\033[35m Reload your terminal"

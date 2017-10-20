@@ -4,30 +4,31 @@
 # Zsh
 # ==========================================================
 cd zsh
+
 # Install zsh config
 if [ ! -d ~/.zprezto/ ];then
    ./install/install.sh
 fi
 
-./build.sh | tee -a log &
+./build.sh &
 
 # ==========================================================
 # Tmux
 # ==========================================================
 cd ../tmux
-./build.sh
+./build.sh &
 
 # ==========================================================
 # Vim
 # ==========================================================
 cd ../nvim
-./install/install.sh | tee -a log &
+./install/install.sh &
 
 # ==========================================================
 # Vim
 # ==========================================================
 cd ../vim
-./install/install.sh | tee -a log &
+./install/install.sh &
 
-clear
+echo "\033[32mDone!"
 echo "\033[31mConfig sucessfull installed"
