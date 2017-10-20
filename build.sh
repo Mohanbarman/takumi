@@ -28,7 +28,7 @@ cd ../nvim
 # Vim
 # ==========================================================
 cd ../vim
-./install/install.sh &
+./install/install.sh
 
 echo "\033[32mDone!"
 echo "\033[31mConfig sucessfull installed"

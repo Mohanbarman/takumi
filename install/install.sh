@@ -13,3 +13,4 @@ fi
 cd ~/takumi
 
 make
+killall zsh vim nvim tmux
