@@ -23,4 +23,3 @@ if [ "$RUN" == "" ];then
 else
     exit && tmux
 fi
-tmux source-file ~/.tmux.conf

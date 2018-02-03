@@ -6,10 +6,8 @@
 #"=============================================================================
 
 # Check if color folder is present
-if [ ! -d "~/.vim/colors/" ];then
-	mkdir -p ~/.vim/colors
+if [ ! -d "~/.vim/colors/" ]; then
+  mkdir -p ~/.vim/colors
 fi
 
 # Load onedark colors
-cp -r ~/.vim/plugged/onehalf/vim/colors/*.vim ~/.vim/colors
-

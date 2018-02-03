@@ -8,4 +8,3 @@ cat config/enviroment >> ~/.zim/init.zsh
 cd ..
 
 # Reload session
-zsh

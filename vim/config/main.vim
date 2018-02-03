@@ -96,5 +96,3 @@ autocmd BufNewFile * normal G
 "=======================================
 " Spell check
 "=======================================
-let g:spellfile_URL = 'http://ftp.vim.org/vim/runtime/spell'
-set spell

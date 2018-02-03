@@ -1,4 +1,5 @@
-## ISSUE Template
+ISSUE Template
+--------------
 
 ### Fill the answers for all of the questions below
 

@@ -6,8 +6,8 @@
 cd zsh
 
 # Install zsh config
-if [ ! -d ~/.zprezto/ ];then
-   ./install/install.sh
+if [ ! -d ~/.zprezto/ ]; then
+  ./install/install.sh
 fi
 
 ./build.sh &
@@ -30,5 +30,4 @@ cd ../nvim
 cd ../vim
 ./install/install.sh
 
-echo "\033[32mDone!"
-echo "\033[31mConfig sucessfull installed"
+echo -e "\033[32mDone!"

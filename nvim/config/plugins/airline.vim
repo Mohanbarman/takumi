@@ -20,5 +20,3 @@ let g:airline_symbols.space = "\ua0"
 
 "=======================================
 " Design
-"=======================================
-let g:airline_theme='angr'

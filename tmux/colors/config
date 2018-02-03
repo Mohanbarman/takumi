@@ -89,4 +89,3 @@ setw -g window-status-bell-bg colour1
 set -g message-attr bold
 set -g message-fg colour232
 set -g message-bg colour166
-

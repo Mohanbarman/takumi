@@ -27,5 +27,3 @@ alias -g P='2>&1 | $PAGER'
 alias -g L='| less'
 alias -g LA='2>&1 | less'
 alias -g M='| most'
-alias -g C='| wc -l'
-

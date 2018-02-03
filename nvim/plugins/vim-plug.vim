@@ -5,11 +5,11 @@
 let vim_plug_just_installed = 0
 let vim_plug_path = expand('~/.config/nvim/autoload/plug.vim')
 if !filereadable(vim_plug_path)
-        echo "Installing Vim-plug..."
-        echo ""
-        silent !mkdir -p ~/.config/nvim/autoload
-        silent !curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-        let vim_plug_just_installed = 1
+    echo "Installing Vim-plug..."
+    echo ""
+    silent !mkdir -p ~/.config/nvim/autoload
+    silent !curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+    let vim_plug_just_installed = 1
 endif
 
 if vim_plug_just_installed
@@ -139,7 +139,7 @@ Plug 'octol/vim-cpp-enhanced-highlight', { 'for': ['cpp', 'c', 'h'] }
 Plug 'derekwyatt/vim-protodef', { 'for': ['cpp', 'c', 'h'] }
 Plug 'derekwyatt/vim-fswitch', { 'for': ['cpp', 'c', 'h'] }
 "Plug 'maralla/completor.vim'
-Plug 'nlknguyen/c-syntax.vim',              {'for': 'c'}
+Plug 'nlknguyen/c-syntax.vim', {'for': 'c'}
 
 "=======================================
 " Main autocomplete framework
@@ -203,8 +203,6 @@ Plug 'marcweber/vim-addon-mw-utils'
 Plug 'tomtom/tlib_vim'
 Plug 'chiel92/vim-autoformat'
 Plug 'mhinz/vim-startify'
+
 "=============================================================================
 " END
-"=============================================================================
-
-call plug#end()
