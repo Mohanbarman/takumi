@@ -23,3 +23,6 @@ let g:syntastic_vimlint_options = get(g:, 'syntastic_vimlint_options', {
       \'EVL102': 1 ,
       \'EVL103': 1 ,
       \'EVL205': 1 ,
+      \'EVL105': 1 ,
+\})
+

@@ -20,3 +20,4 @@ done
 chsh -s =zsh
 source ${ZDOTDIR:-${HOME}}/.zlogin
 
+echo "\033[32m[I]:\033[36m Reload your terminal\033m[0m"

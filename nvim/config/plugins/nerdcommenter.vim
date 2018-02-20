@@ -13,3 +13,6 @@ let g:NERDCompactSexyComs = 1
 
 "=======================================
 "Remove unused space
+"=======================================
+let g:NERDTrimTrailingWhitespace = 1
+

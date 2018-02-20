@@ -10,3 +10,6 @@ endif
 syntax on
 try
     silent colorscheme onedark
+catch
+endtry
+

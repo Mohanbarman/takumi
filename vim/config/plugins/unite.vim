@@ -11,3 +11,6 @@ let g:unite_winheight = 10
 
 call unite#custom_source('file_rec,file_rec/async,file_mru,file,buffer,grep',
       \ 'ignore_pattern', join([
+      \ '\.git/',
+      \ ], '\|'))
+

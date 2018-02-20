@@ -46,3 +46,5 @@ cat config/plugins/*.vim >> ~/.vimrc
 # Apply changes
 #=======================================
 vim -c PlugInstall -c qa!
+
+cd ..

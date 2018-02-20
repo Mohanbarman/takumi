@@ -10,3 +10,5 @@ if [ ! -d ~/takumi ];then
     git clone https://www.github.com/deltaxflux/takumi.git ~/takumi
 fi
 
+make
+

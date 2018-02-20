@@ -7,3 +7,5 @@ function! InsertSmall ()
 endfunction
 
 function! InsertBig()
+    r~/.config/nvim/custom/big.txt
+endfunction

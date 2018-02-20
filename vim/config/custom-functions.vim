@@ -7,3 +7,5 @@ function! InsertSmall ()
 endfunction
 
 function! InsertBig()
+    r~/.vim/custom/big.txt
+endfunction

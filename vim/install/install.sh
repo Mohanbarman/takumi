@@ -4,11 +4,11 @@ rm -rf ~/.vim*
 
 # Install vim-plug
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
-  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
 # Clone Project
-if [ ! -d ~/takumi ]; then
-  git clone https://www.github.com/deltaxflux/takumi.git ~/takumi
+if [ ! -d ~/takumi ];then
+    git clone https://www.github.com/deltaxflux/takumi.git ~/takumi
 fi
 
 # Install Plugins
@@ -22,8 +22,10 @@ bash scripts/colors.sh
 
 # Load config files
 cat config/main.vim >> ~/.vimrc
-cat config/plugins/airline.vim >> ~/.vimrc
+cat config/plugins/airline.vim >>  ~/.vimrc
 cat config/colors.vim >> ~/.vimrc
 
 vim -c PlugInstall -c qa
+
+make
 
