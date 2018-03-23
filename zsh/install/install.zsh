@@ -1,10 +1,5 @@
 #/bin/zsh
 
-rm -rf "~/.zsh*"
-rm -rf "~/.zim*"
-rm -rf "~/.oh*"
-rm -rf "~/.fish*"
-
 # clone new zsh shell
 if [ ! -d ~/.zim ];then
     git clone --recursive https://github.com/Eriner/zim.git ${ZDOTDIR:-${HOME}}/.zim
@@ -17,7 +12,5 @@ for template_file ( ${ZDOTDIR:-${HOME}}/.zim/templates/* ); do
   ( print -rn "$(<${template_file})$(<${user_file})" >! ${user_file} ) 2>/dev/null
 done
 
-chsh -s =zsh
 source ${ZDOTDIR:-${HOME}}/.zlogin
 
-echo "\033[32m[I]:\033[36m Reload your terminal\033m[0m"

@@ -6,11 +6,11 @@
 # Name: Install
 # ########################################
 
-if [ ! -d ~/takumi/ ];then
-    git clone https://github.com/deltaxflux/takumi ~/takumi/
+if [ ! -d $HOME/takumi/ ];then
+    git clone https://github.com/deltaxflux/takumi $HOME/takumi/
 fi
 
-cd ~/takumi
+cd $HOME/takumi
 
 make
-killall zsh vim nvim tmux
+
