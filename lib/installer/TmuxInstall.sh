@@ -15,6 +15,8 @@
 
 RUN=$(ps -a | grep "tmux")
 
+cd tmux 
+
 # Load init config
 cat .tmux.conf >> $TMUX_RC
 
@@ -34,4 +36,4 @@ else
 fi
 tmux source-file $TMUX_RC
 
-
+cd ..

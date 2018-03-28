@@ -23,7 +23,7 @@ source lib/PrintUtils.sh
 
 source lib/installer/ZshInstall.sh
 source lib/installer/VimInstall.sh
-source lib/installer/TmuxInstall.sh
+#source lib/installer/TmuxInstall.sh
 source lib/installer/NvimInstall.sh
 
 # =======================================

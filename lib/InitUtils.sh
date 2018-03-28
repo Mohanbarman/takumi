@@ -14,7 +14,7 @@
 ###############################################################
 
 _init_files () {
-    dependencies=( "$VIM_RC" "$NVIM_DIR" "$NVIM_RC" "$ZSH_RC" "$VIM_DIR" "$TMUX_RC" "$TMUX_DIR" )
+    dependencies=( "$VIM_RC" "$NVIM_DIR" "$NVIM_RC" "$ZSH_RC" "$VIM_DIR" "$TMUX_RC" "$TMUX_DIR" "$ZIM_DIR" "$DIALOG" )
 
     if [ ! -d "$HOME/BackupTakumi/" ];then
         mkdir -p "$HOME/BackupTakumi"
@@ -32,4 +32,5 @@ _init_files () {
         fi
     done
 
+    cp misc/.dialogrc $HOME
 }

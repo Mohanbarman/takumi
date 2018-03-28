@@ -34,3 +34,9 @@ readonly ZSH_DIR="$HOME/.zim/"
 # Tmux variables
 readonly TMUX_RC="$HOME/.tmux.conf"
 readonly TMUX_DIR="$HOME/.tmux"
+
+# ZIM
+readonly ZIM_DIR="$HOME/.zim"
+
+# Dialog
+readonly DIALOG="$HOME/.dialogrc"
