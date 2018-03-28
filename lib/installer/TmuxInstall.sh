@@ -13,27 +13,31 @@
 ### License: GPL v3.0
 ###############################################################
 
-RUN=$(ps -a | grep "tmux")
+tmux_install ()
+{
 
-cd tmux 
+	RUN=$(ps -a | grep "tmux")
 
-# Load init config
-cat .tmux.conf >> $TMUX_RC
+	cd tmux 
 
-# Load plugins
-cat plugins/tpm.conf >> $TMUX_RC
+	# Load init config
+	cat .tmux.conf >> $TMUX_RC
 
-# Load config
-cat config/mappings.conf >> $TMUX_RC
+	# Load plugins
+	cat plugins/tpm.conf >> $TMUX_RC
 
-# Design config
-cat colors/config >> $TMUX_RC
+	# Load config
+	cat config/mappings.conf >> $TMUX_RC
 
-if [ "$RUN" == "" ];then
-    tmux
-else
-    exit && tmux
-fi
-tmux source-file $TMUX_RC
+	# Design config
+	cat colors/config >> $TMUX_RC
 
-cd ..
+	if [ "$RUN" == "" ];then
+	    tmux
+	else
+	    exit && tmux
+	fi
+	tmux source-file $TMUX_RC
+
+	cd ..
+}
