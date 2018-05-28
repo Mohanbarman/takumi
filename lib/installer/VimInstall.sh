@@ -17,8 +17,8 @@ vim_install() {
     cd vim
 
     _dialog_wait "$VIM_WAIT"
-    curl -fLo $VIM_DIR/autoload/plug.vim --create-dirs \
-        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+
+    curl -fLo $VIM_DIR/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
     # Install Plugins
     cat plugins/vim-plug.vim >> $VIM_RC
@@ -35,9 +35,6 @@ vim_install() {
     if [ -d "$VIM_DIR/plugged/onehalf" ];then
         cp -r $VIM_DIR/plugged/onehalf/vim/colors/* ~/.vim/colors
     fi
-
-    # Fix onehalf colorscheme
-    bash scripts/colors.sh
 
     # Load config files
     cat config/main.vim >> $VIM_RC

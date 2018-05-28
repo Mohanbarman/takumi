@@ -16,11 +16,11 @@
 ###############################################################
 
 _dialog_menu() {
-	dialog --title "$TAKUMI_TITLE" --checklist "Choose your config file(s)" 20 40 4 \
+    dialog --title "$TAKUMI_TITLE" --checklist "Choose your config file(s)" 6 60 0 \
         1 "ZSH config" on\
         2 "VIM config" on \
         3 "NVIM config" on\
-	4 "TMUX config" on 2>$TEMP_PATH
+        4 "TMUX config" on 2>$TEMP_PATH
 }
 
 # Print wait value
@@ -37,9 +37,7 @@ _dialog_wait() {
 }
 
 _dialog_agree() {
-    exec 3>&1
-    res=$(dialog --title "$TAKUMI_TITLE"  --yesno "$1" 6 25 2>&1 1>&3)
-    if [ "$res" == "no" ];then exit 1;fi
+    res=$(dialog --title "$TAKUMI_TITLE"  --yesno "$1" 6 60 2>/tmp/ans)
 }
 
 _dialog_title() {

@@ -14,10 +14,11 @@
 ###############################################################
 
 _init_files () {
+    readonly DATE=$(date +"%m_%d_%Y_%T")
     dependencies=( "$VIM_RC" "$NVIM_DIR" "$NVIM_RC" "$ZSH_RC" "$VIM_DIR" "$TMUX_RC" "$TMUX_DIR" "$ZIM_DIR" "$DIALOG" )
 
-    if [ ! -d "$HOME/BackupTakumi/" ];then
-        mkdir -p "$HOME/BackupTakumi"
+    if [ ! -d "$HOME/BackupTakumi/${DATE}" ];then
+        mkdir -p "$HOME/BackupTakumi/${DATE}"
         exist=false
     else
         exist=true
@@ -26,7 +27,7 @@ _init_files () {
     for i in "${dependencies[@]}";do
         if [ -f "$i" ] || [ -d "$i" ];then
             if [ "$exist" == "false" ];then
-                cp -r $i "$HOME/BackupTakumi"
+                cp -r $i "$HOME/BackupTakumi/${DATE}"
             fi
             rm -rf $i
         fi

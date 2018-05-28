@@ -2,6 +2,7 @@
 
 # Variable
 RUN=$(ps -a | grep "tmux")
+
 # Clear config
 rm -rf ~/.tmux.conf
 touch ~/.tmux.conf
