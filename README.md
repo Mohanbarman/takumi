@@ -3,7 +3,7 @@
 
 ---
 
-<p align="center"><img src="https://i.imgur.com/iaE9trr.png""/><blockquote>Config: Nvim configuration</a></blockquote></p>
+<p align="center"><img src="https://i.imgur.com/ma4lug3.png""/><blockquote>Config: Nvim configuration</a></blockquote></p>
 
 # Dotfiles
 
