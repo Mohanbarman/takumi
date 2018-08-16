@@ -15,29 +15,13 @@
 
 tmux_install ()
 {
+    DIR=$(dirname $(readlink -f $0))
 
-	RUN=$(ps -a | grep "tmux")
+    if [ -f $HOME/.tmux.conf ];then unlink $HOME/.tmux.conf; fi
+    if [ -d $HOME/.tmux ];then unlink $HOME/.tmux; fi
 
-	cd tmux 
-
-	# Load init config
-	cat .tmux.conf >> $TMUX_RC
-
-	# Load plugins
-	cat plugins/tpm.conf >> $TMUX_RC
-
-	# Load config
-	cat config/mappings.conf >> $TMUX_RC
-
-	# Design config
-	cat colors/config >> $TMUX_RC
-
-	if [ "$RUN" == "" ];then
-	    tmux
-	else
-	    exit && tmux
-	fi
-	tmux source-file $TMUX_RC
+    ln -s $DIR/tmux/tmux.conf $HOME/.tmux.conf
+    ln -s $DIR/tmux $HOME/.tmux
 
 	cd ..
 }

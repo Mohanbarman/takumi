@@ -25,14 +25,13 @@ call plug#begin()
 "=======================================
 " Colorscheme
 "=======================================
-Plug 'joshdick/onedark.vim'
+Plug 'haishanh/night-owl.vim'
 
 "=======================================
 " Statusbar in nvim
 "=======================================
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'myusuf3/numbers.vim'
 
 "=======================================
 " Complete with tab
@@ -42,8 +41,6 @@ Plug 'ervandew/supertab'
 "=======================================
 " Latex is love
 "=======================================
-Plug 'lervag/vimtex'
-Plug 'gerw/vim-latex-suite'
 Plug 'gmarik/snipmate.vim'
 
 "=======================================
@@ -92,19 +89,6 @@ Plug 'scrooloose/nerdtree'
 Plug 'suan/vim-instant-markdown'
 
 "=======================================
-" Tmux in vim
-"=======================================
-Plug 'tmux-plugins/vim-tmux'
-
-"=======================================
-" Unite
-"=======================================
-Plug 'Shougo/vimproc.vim', { 'do': 'make' }
-Plug 'Shougo/neomru.vim'
-Plug 'Shougo/unite.vim'
-Plug 'Shougo/neoyank.vim'
-
-"=======================================
 " Syntax check
 "=======================================
 Plug 'vim-syntastic/syntastic'
@@ -138,7 +122,6 @@ Plug 'shougo/deoplete.nvim'
 Plug 'octol/vim-cpp-enhanced-highlight', { 'for': ['cpp', 'c', 'h'] }
 Plug 'derekwyatt/vim-protodef', { 'for': ['cpp', 'c', 'h'] }
 Plug 'derekwyatt/vim-fswitch', { 'for': ['cpp', 'c', 'h'] }
-"Plug 'maralla/completor.vim'
 Plug 'nlknguyen/c-syntax.vim',              {'for': 'c'}
 
 "=======================================
@@ -172,37 +155,25 @@ Plug 'Shougo/neco-vim'
 Plug 'Shougo/neoinclude.vim'
 
 "=======================================
-" Autoclose windows
-"=======================================
-Plug 'Townk/vim-autoclose'
-
-"=======================================
 " Search engine
 "=======================================
 Plug 'mileszs/ack.vim'
-
-"=======================================
-" Html plugin
-"=======================================
-Plug 'mattn/emmet-vim'
 
 "=============================================================================
 " Python support
 "=============================================================================
 Plug 'davidhalter/jedi-vim'
 Plug 'neovim/python-client'
-Plug 'klen/python-mode'
 Plug 'hynek/vim-python-pep8-indent'
 Plug 'fs111/pydoc.vim'
-"Plug 'fisadev/vim-isort'
 
 "=============================================================================
 " MISC
 "=============================================================================
 Plug 'marcweber/vim-addon-mw-utils'
-Plug 'tomtom/tlib_vim'
 Plug 'chiel92/vim-autoformat'
 Plug 'mhinz/vim-startify'
+
 "=============================================================================
 " END
 "=============================================================================

@@ -14,6 +14,7 @@
 ###############################################################
 
 nvim_install() {
+    rm -rf $NVIM_RC $NVIM_DIR
     cd nvim
 
     if [ ! -d  $HOME/.config/nvim/custom/ ];then

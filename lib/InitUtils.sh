@@ -29,7 +29,6 @@ _init_files () {
             if [ "$exist" == "false" ];then
                 cp -r $i "$HOME/BackupTakumi/${DATE}"
             fi
-            rm -rf $i
         fi
     done
 

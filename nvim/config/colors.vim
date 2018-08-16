@@ -8,8 +8,7 @@ if (empty($TMUX))
 endif
 
 syntax on
-try
-    silent colorscheme onedark
-catch
+    try
+        silent colorscheme night-owl
+    catch
 endtry
-

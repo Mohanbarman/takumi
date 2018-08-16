@@ -14,6 +14,7 @@
 ###############################################################
 
 zsh_install() {
+    rm -rf $ZSH_RC $ZSH_DIR $ZSH_DIR
     cd zsh
 
     _dialog_wait "$ZSH_NOTICE"

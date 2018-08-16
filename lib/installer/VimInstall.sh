@@ -14,6 +14,8 @@
 ###############################################################
 
 vim_install() {
+    rm -rf $VIM_DIR $VIM_RC
+
     cd vim
 
     _dialog_wait "$VIM_WAIT"
