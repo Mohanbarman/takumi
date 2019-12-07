@@ -46,7 +46,7 @@ sudo pacman -S vim neovim curl clang python python-pip python3 python3-pip tmux 
 
 
 ### Development
-We try always to improve the dotfiles. If you want to constibute create a pull request.
+We try always to improve the dotfiles. If you want to contribute create a pull request.
 <br>
 <br>
  [![](https://img.shields.io/badge/Workflow-gitflow--branching--model-81A1C1.svg?style=flat-square)](http://nvie.com/posts/a-successful-git-branching-model) 
